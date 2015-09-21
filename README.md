@@ -47,6 +47,28 @@ Language files contain nested groups of phrases. Phrases can be parameterized. T
         }
     }
 
+A language file can contain simple phrases or parameterized phrases. Parameters are numbered starting at 0 and put in curly brackets.
+
+Parameterized phrases are particularly useful when different languages have a different grammatical order. Even the order of the placeholders can be different for different languages. For example:
+
+    en.json:
+    {
+        "user" : {
+            "NOTIFY_INVITE" : "You're invited to join {0} at {1}"
+        }
+    }
+
+    nl.json:
+    {
+        "user" : {
+            "NOTIFY_INVITE" : "U bent om {1} bij {0} uitgenodigd"
+        }
+    }
+
+Some languages put the time before the location, other languages the inverse.
+
+Phrases can be grouped and nested in categories.
+
 ## Referencing phrases in HTML
 
 An HTML snippet referencing the language would look like:
